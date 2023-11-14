@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext");
+@import url("https://fonts.googleapis.com/css2?family=Lumanosimo&family=Montserrat:wght@500;600&family=Poppins&family=REM:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Onest:wght@500&family=Roboto&display=swap");
+
+/* Apply a gradient background */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 7%;
+  background-color: #fff;
+  user-select: none;
+}
+
+/* Style the form container */
+
+form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 30%;
+}
+
+/* Style the form heading */
+
+h1 {
+  color: #333;
+  font-size: 26px;
+  padding-bottom: 8%;
+  /* font-family: "Onest"; */
+}
+
+/* Style labels and input fields */
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="number"],
+select[id="category"] {
+  width: 80%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  color: #333;
+  font-size: 16px;
+}
+
+select[id="category"] {
+  font-size: 14px;
+}
+
+/* Style the file input container */
+
+.file-upload-container {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.file-upload-label {
+  background-color: #2196f3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.file-upload-label:hover {
+  background-color: #1976d2;
+}
+
+.selected-file {
+  margin-top: 10px;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Style the submit button */
+
+input[type="submit"] {
+  background-color: #ffc107;
+  color: #333;
+  margin-top: 15px;
+  padding: 17px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+input[type="submit"]:hover {
+  background-color: #ffa000;
+}
+
+/* Add some spacing between form elements */
+
+br {
+  clear: both;
+}
+
+.readonly {
+  pointer-events: none;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  flex: 1;
+  margin-right: 20px;
+  /* Adjust the margin between columns as needed */
+}
+
+.container {
+  margin-bottom: 10px;
+}
