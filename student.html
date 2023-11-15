@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grabbo - For Students</title>
+        <link rel="stylesheet" href="css/student.css">
+
+        <!-- BOOTSTRAP -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous">
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+    </head>
+
+    <body>
+
+        <section class="content">
+
+            <section class="navbarSection">
+
+                <div id="mainNavigation">
+                    <div class="navbar-expand-md">
+                        <div class="navbar-dark text-center my-2">
+                            <button class="navbar-toggler w-75" type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#navbarNavDropdown"
+                                aria-controls="navbarNavDropdown"
+                                aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <img src="images/hamburger.png" alt="Menu"
+                                    class="custom-hamburger">
+                                <span class="align-middle">Menu</span>
+                            </button>
+                        </div>
+                        <div class="text-center mt-3 collapse navbar-collapse"
+                            id="navbarNavDropdown">
+                            <ul class="navbar-nav mx-auto ">
+                                <!-- <li class="nav-item"> -->
+                                <a class="navbar-brand" href="#">
+                                    <img src="images/Grabbo.png"
+                                        alt="Grabbo Logo" class="brand-logo">
+                                    <span class="brand-name">Grabbo</span>
+                                </a>
+                                <!-- </li> -->
+                                <li class="nav-item">
+                                    <a class="nav-link home-button active"
+                                        aria-current="page" href>Home</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a
+                                        class="nav-link dropdown-toggle categories"
+                                        href="#" id="navbarDropdownMenuLink"
+                                        role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Categories
+                                    </a>
+                                    <ul class="dropdown-menu" id="dropdown-menu"
+                                        aria-labelledby="navbarDropdownMenuLink">
+                                        <li><a
+                                                class="dropdown-item instantFood category-button"
+                                                data-category="instant_food"
+                                                href="#">Instant Food</a></li>
+                                        <li><a
+                                                class="dropdown-item snacks category-button"
+                                                data-category="snacks" href="#">Namkeen
+                                                & Snacks</a></li>
+                                        <li><a
+                                                class="dropdown-item dairy category-button"
+                                                data-category="dairy" href="#">Dairy</a></li>
+                                        <li><a
+                                                class="dropdown-item beverages category-button"
+                                                data-category="beverages"
+                                                href="#">Beverages</a></li>
+                                        <li><a
+                                                class="dropdown-item biscuits category-button"
+                                                data-category="biscuits"
+                                                href="#">Biscuits</a></li>
+                                        <li><a
+                                                class="dropdown-item household category-button"
+                                                data-category="household"
+                                                href="#">Household</a></li>
+                                        <li><a
+                                                class="dropdown-item personalCare category-button"
+                                                data-category="personal_care"
+                                                href="#">Personal Care</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#footer-section">Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link aboutUs-button" href>About
+                                        Us</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Search Section
+================================================== -->
+
+            <section class="content-section">
+
+                <div class="search-container">
+                    <div class="heading">
+                        <h3 class="quote">" I'm not saying Maggi is the answer to all of life's problems, but it's definitely the answer to most of them. "
+                        </h3>
+                    </div>
+                    <div class="search-bar-section">
+
+                        <form class="form search-bar">
+                            <button>
+                                <svg width="17" height="16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    role="img"
+                                    aria-labelledby="search">
+                                    <path
+                                        d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                                        stroke="currentColor"
+                                        stroke-width="1.333"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                            <input class="input search-input"
+                                placeholder="Search for your favourite item"
+                                required type="text">
+                            <button class="reset" type="reset">
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div id="resultsContainer"></div>
+
+            </section>
+
+        </section>
+
+        <!-- Footer Section -->
+        <section class="footer" id="footer-section">
+            <div class="footer-clean">
+                <footer>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="item title-name">
+                                <img src="images/Grabbo.png" alt="Grabbo Logo"
+                                    class="brand-logo brand-logo-footer">
+                                <a class="brand-name brand-name-footer"
+                                    href="student.html">GRABBO</a>
+                            </div>
+                            <div class="col-lg-3 item social">
+                                <a href="#">
+                                    <i class="icon ion-social-instagram"></i>
+                                    <!-- <ion-icon class="icon" name="logo-instagram"></ion-icon> -->
+                                </a>
+                                <a href="#">
+                                    <i class="icon ion-social-facebook"></i></a><a
+                                    href="#"><i
+                                        class="icon ion-social-twitter"></i></a><a
+                                    href="#"><i
+                                        class="icon ion-social-snapchat"></i></a>
+                                <p class="copyright">Grabbo © 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </section>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+        <script src="js/student.js"></script>
+
+    </body>
+
+</html>

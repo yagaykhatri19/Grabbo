@@ -1,0 +1,726 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext");
+@import url("https://fonts.googleapis.com/css2?family=Lumanosimo&family=Montserrat:wght@500;600&family=Poppins&family=REM:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Onest:wght@500&family=Roboto&display=swap");
+
+/* #Primary
+================================================== */
+
+body {
+  transition: all 200ms linear;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 7%;
+  background-color: #fff;
+  user-select: none;
+  cursor: default;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+/* Navbar Section
+================================================== */
+
+/* Style for the dropdown menu */
+
+.nav-item.dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  /* Set a higher z-index */
+  list-style: none;
+  padding: 10px;
+  top: 100%;
+  /* Position the dropdown below the parent */
+  left: 0;
+  /* Align with the left edge of the parent */
+  column-count: 3;
+  /* Display items in 3 columns */
+  column-gap: 10px;
+  /* Adjust the gap between columns as needed */
+}
+
+/* Style for individual dropdown items */
+
+.nav-item.dropdown .dropdown-menu li {
+  padding: 5px 0;
+  break-inside: avoid;
+  /* Avoid breaking items across columns */
+}
+
+/* Set the parent's position to relative to serve as a reference for absolute positioning */
+
+.nav-link.dropdown-toggle {
+  position: relative;
+}
+
+/* Remove the default focus outline */
+
+.nav-link:focus {
+  outline: none;
+}
+
+.navbar-brand {
+  position: absolute;
+  display: fixed;
+  top: -228%;
+  left: 5%;
+}
+
+.brand-logo {
+  width: 65px;
+  margin-right: 15px;
+  margin-left: 0;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+.brand-name {
+  font-family: "Montserrat";
+  font-size: large;
+  font-weight: bold;
+}
+
+#mainNavigation a {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 13%;
+}
+
+.dropdown-menu {
+  background: #ffd401;
+  z-index: 999;
+}
+
+a.dropdown-toggle {
+  color: #183153 !important;
+}
+
+.dropdown-item {
+  color: #183153 !important;
+  margin: 1.3% !important;
+  font-size: 13px !important;
+  font-family: "Onest" !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  z-index: 999;
+}
+
+a.dropdown-item:hover {
+  color: #181818 !important;
+}
+
+.nav-item a {
+  color: #183153;
+}
+
+.nav-item a:hover {
+  background-color: #ffd401;
+}
+
+.nav-item {
+  min-width: 12vw;
+}
+
+.custom-hamburger {
+  position: fixed;
+  top: 20px;
+  /* Adjust the top position as needed */
+  right: 20px;
+  /* Adjust the right position as needed */
+  width: 30px;
+  /* Adjust the width as needed */
+  height: 30px;
+  /* Adjust the height as needed */
+  z-index: 999;
+  /* Ensure it's above other content */
+  cursor: pointer;
+  /* You can add more styles as needed */
+}
+
+#mainNavigation {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+#navbarNavDropdown.collapsing .navbar-nav,
+#navbarNavDropdown.show .navbar-nav {
+  background: #87afe8;
+  padding: 6px;
+}
+
+/* Search Section
+==================================================  */
+
+/* Basic styling for the search container */
+
+.search-container {
+  position: absolute;
+  top: -8%;
+  /* top: -15%; */
+  width: 100%;
+  text-align: center;
+  margin: 250px auto 0;
+  /* border: 5px solid red; */
+}
+
+.heading-container {
+  margin: auto;
+  justify-items: center;
+  place-content: center;
+}
+
+.heading {
+  font-family: "Montserrat";
+  width: 65%;
+  text-align: left;
+  margin: auto;
+  margin-bottom: 3%;
+  font-style: oblique;
+}
+
+/* From uiverse.io by @satyamchaudharydev */
+
+/* removing default style of button */
+
+.form button {
+  border: none;
+  background: none;
+  color: #8b8ba7;
+}
+
+/* styling of whole input container */
+
+.form {
+  --timing: 0.3s;
+  --width-of-input: 200px;
+  --height-of-input: 40px;
+  --border-height: 2px;
+  --input-bg: #fff;
+  --border-color: #ffd401;
+  --border-radius: 10px;
+  --after-border-radius: 10px;
+  position: relative;
+  width: var(--width-of-input);
+  height: var(--height-of-input);
+  display: flex;
+  align-items: center;
+  padding-inline: 0.8em;
+  border-radius: var(--border-radius);
+  transition: border-radius 0.5s ease;
+  background: var(--input-bg, #fff);
+}
+
+/* styling of Input */
+
+.input {
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+}
+
+/* styling of animated border */
+
+.form:before {
+  content: "";
+  position: absolute;
+  background: var(--border-color);
+  transform: scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: var(--border-height);
+  left: 0;
+  bottom: 0;
+  border-radius: var(--border-radius);
+  transition: transform var(--timing) ease;
+}
+
+/* Hover on Input */
+
+.form:focus-within {
+  border-radius: var(--after-border-radius);
+}
+
+input:focus {
+  outline: none;
+}
+
+/* here is code of animated border */
+
+.form:focus-within:before {
+  transform: scale(1);
+}
+
+/* styling of close button */
+
+/* == you can click the close button to remove text == */
+
+.reset {
+  border: none;
+  background: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* close button shown when typing */
+
+input:not(:placeholder-shown) ~ .reset {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* sizing svg icons */
+
+.form svg {
+  width: 17px;
+  margin-top: 1px;
+  user-select: none;
+  cursor: default;
+}
+
+/* Styling for the search bar */
+
+.search-bar {
+  width: 600px;
+  height: 50px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  outline: none;
+  text-decoration: none;
+  margin: auto;
+  /* Remove the default input focus outline */
+}
+
+/* Styling for the search button */
+
+.search-button {
+  width: 100px;
+  height: 50px;
+  font-size: 18px;
+  background-color: #ffd401;
+  color: #183153;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Hover effect for the search button */
+
+.search-button:hover {
+  background-color: #183153;
+  color: #ffd401;
+}
+
+/* About Us Section 
+================================================== */
+
+.about-us {
+  padding: 7rem 0rem;
+  transition: transform 1s, opacity 1s;
+  font-family: "Montserrat";
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+.section__title {
+  max-width: 69em;
+  margin: 0 auto 5rem auto;
+}
+
+.team-title {
+  text-align: center;
+  font-family: "Poppins";
+}
+
+.section__description {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-family: "Poppins";
+}
+
+.section__description p {
+  font-size: 1.2rem;
+  /* font-weight: 600; */
+  /* text-transform: uppercase; */
+  /* color: var(--color-primary); */
+  margin-bottom: 1rem;
+}
+
+.section__header {
+  font-size: 1.2rem;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+.about-the-team {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin: 0 12rem;
+  /* border: 5px dotted red; */
+}
+
+.member__img1 {
+  width: 65%;
+  /* border: 8px solid #ffd401; */
+  border: 7px solid #183153;
+  /* margin-right: -100px; */
+  border-radius: 10%;
+}
+
+.member__img2 {
+  width: 65%;
+  /* border: 5px solid blue; */
+  /* border: 8px solid #ffd401; */
+  border: 7px solid #183153;
+  margin-left: 120px;
+  border-radius: 10%;
+}
+
+.member-description1 {
+  padding: 10% 0 30%;
+  align-self: right;
+  justify-self: right;
+  width: 75%;
+  font-size: 1.2rem;
+  margin-right: 12rem;
+  /* border: 5px double green; */
+}
+
+.member-description2 {
+  padding-top: 7%;
+  align-self: right;
+  justify-self: right;
+  width: 75%;
+  font-size: 1.2rem;
+  margin-left: 12rem;
+  /* border: 5px double green; */
+}
+
+.member-paragraph {
+  font-size: 1.1rem;
+}
+
+.member-name {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+/* Product Not Found Section
+================================================== */
+
+.no-product-found {
+  width: 60%;
+  /* border: 5px solid green; */
+  margin: 60px auto 0;
+}
+
+.not-found-searchBar {
+  text-align: center;
+  margin: 30px auto 0;
+}
+
+.not-found-heading {
+  width: 45%;
+  font-family: "Montserrat";
+  margin: 90px auto 0;
+  text-align: center;
+}
+
+/* Product Found Section
+================================================== */
+
+.products {
+  margin: 150px auto 50px;
+  display: flex;
+  flex-wrap: wrap;
+  /* border: 5px solid red; */
+  width: 90%;
+  justify-content: center;
+}
+
+.card {
+  transition: all 0.3s;
+  /* cursor: pointer; */
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 20px 30px;
+  width: 190px;
+  height: 254px !important;
+  padding: 0.8em;
+  background: #f5f5f5;
+  position: relative;
+  overflow: visible;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border: 20px solid red;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1),
+    -4px -4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-image-container {
+  width: 100%;
+  height: 64%;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-image {
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: #183153;
+  cursor: default;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+}
+
+.card-des {
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  margin: 0;
+  font-size: 13px;
+  color: #183153;
+  cursor: default;
+}
+
+.card-des:hover {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  height: 30px;
+  gap: 10px;
+  padding: 0;
+}
+
+.card-btn {
+  font-size: 15px;
+  color: #fff;
+  /* color: #183153; */
+  /* cursor: pointer; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #183153;
+  /* background-color: #ffd401; */
+  max-height: 100px;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all ease-in-out 0.5s;
+  gap: 5px;
+  box-sizing: border-box;
+  padding: 2px;
+  margin-top: 8px;
+}
+
+.card-btn:hover {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  border-radius: 5px;
+  height: 30px;
+  gap: 10px;
+  padding: 0;
+}
+
+.card-btn-text {
+  opacity: 0;
+  font-size: 1px;
+  font-weight: 500;
+  transition: all ease-in-out 0.5s;
+}
+
+.card-btn:hover > .card-btn-text {
+  opacity: 1;
+  font-size: 15px;
+}
+
+.card:hover .card-title {
+  display: block;
+  height: 65px !important;
+}
+
+/* Media queries for responsiveness */
+
+@media screen and (max-width: 1200px) {
+  .product-card {
+    width: calc(25% - 20px);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .product-card {
+    width: calc(33.33% - 20px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .product-card {
+    width: calc(50% - 20px);
+  }
+}
+
+/* Footer Section
+================================================== */
+
+.footer-clean {
+  padding: 25px 0 5px;
+  background-color: #152c4b;
+  color: #fff;
+}
+
+.footer-clean h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.footer-clean ul {
+  padding: 0;
+  list-style: none;
+  line-height: 1.6;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.footer-clean ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer-clean ul a:hover {
+  opacity: 1;
+}
+
+.footer-clean .title-name {
+  text-align: center;
+  text-decoration: none;
+}
+
+.footer-clean .brand-name-footer {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-size: xx-large;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer-clean .brand-logo-footer {
+  /* border: 5px pink double; */
+  width: 7%;
+  cursor: pointer;
+}
+
+.footer-clean .item.social {
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .footer-clean .item {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-clean .item.social {
+    text-align: center;
+  }
+}
+
+.footer-clean .item.social > a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin-left: 10px;
+  margin-top: 22px;
+  color: inherit;
+  opacity: 0.75;
+}
+
+.footer-clean .item.social > a:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 991px) {
+  .footer-clean .item.social > a {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-clean .item.social > a {
+    margin-top: 10px;
+  }
+  .footer {
+    width: 100%;
+  }
+  .footer-clean .brand-name-footer {
+    font-size: large;
+  }
+}
+
+.footer-clean .copyright {
+  width: 100%;
+  margin-top: 14px;
+  font-size: 13px;
+  opacity: 0.6;
+  text-align: center;
+  font-family: "Montserrat";
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Update Product - Grabbo</title>
+        <link rel="stylesheet" href="css/updateProduct.css">
+    </head>
+
+    <body>
+        <form action method="POST">
+            <h1>Search for the Product to Update</h1>
+            <!-- Product Category -->
+            <div class="container">
+                <label for="category">Category:</label>
+                <select id="category" name="category" onchange="fetchProducts()"
+                    required>
+                    <option value=" " selected disabled>Select a Category</option>
+                    <option value="instant_food">Instant Food</option>
+                    <option value="snacks">Namkeen & Snacks</option>
+                    <option value="dairy">Dairy</option>
+                    <option value="beverages">Beverages</option>
+                    <option value="biscuits">Biscuits</option>
+                    <option value="household">household</option>
+                    <option value="personal_care">Personal Care</option>
+                </select>
+            </div>
+            <!-- Product Name -->
+            <div class="container">
+                <label for="product">Product:</label>
+                <select id="product" name="product"
+                    onchange="fetchProductsUsingName()">
+                    <option value>Select a Product</option>
+                    <div class="product">
+                    </div>
+                </select>
+            </div>
+
+            <!-- Select what to update -->
+            <div class="container">
+                <label for="update">Update:</label>
+                <select id="update" name="update">
+                    <option value=" " selected disabled>Update Price or Quantity</option>
+                    <option value="price">Price</option>
+                    <option value="quantity">Quantity</option>
+                    <div class="update">
+                    </div>
+                </select>
+            </div>
+            <div class="autocomplete-results" id="autocomplete-results"></div>
+            <input type="submit" value="Update Product">
+        </form>
+        <div id="searchResults">
+            <!-- Display result here using server-side scripting -->
+
+        </div>
+
+        <script src="js/updateProduct.js"></script>
+    </body>
+
+</html>
