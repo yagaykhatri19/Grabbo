@@ -12,6 +12,7 @@ body {
   height: 100vh;
   margin: 0;
   font-family: Arial, sans-serif;
+  user-select: none;
 }
 
 /* Style the form container */
@@ -42,7 +43,8 @@ label {
   font-weight: bold;
 }
 
-input[type="text"] {
+input[type="text"],
+select {
   width: 80%;
   padding: 12px;
   margin-bottom: 20px;

@@ -64,8 +64,8 @@ button:hover a {
 .container {
   position: absolute;
   display: flex;
-  top: 40%;
-  width: 100%;
+  top: 37%;
+  width: 99%;
   align-items: center;
   justify-content: center;
   /* border: 5px solid red; */
@@ -80,6 +80,13 @@ button:hover a {
 }
 
 .button2 {
+  padding: 0 5%;
+  justify-content: center;
+  text-align: center;
+  /* border: 5px solid blue; */
+}
+
+.button3 {
   padding-left: 5%;
   justify-content: center;
   text-align: center;

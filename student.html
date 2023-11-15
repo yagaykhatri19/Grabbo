@@ -123,10 +123,31 @@
                         <h3 class="quote">" I'm not saying Maggi is the answer to all of life's problems, but it's definitely the answer to most of them. "
                         </h3>
                     </div>
-                    <input type="text" class="search-bar"
-                        placeholder="Search for your favourite items">
-                    <button class="search-button">Search</button>
+                    <div class="search-bar-section">
+
+                        <form class="form search-bar">
+                            <button>
+                                <svg width="17" height="16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    role="img"
+                                    aria-labelledby="search">
+                                    <path
+                                        d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                                        stroke="currentColor"
+                                        stroke-width="1.333"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                            <input class="input search-input"
+                                placeholder="Search for your favourite item"
+                                required type="text">
+                            <button class="reset" type="reset">
+                            </button>
+                        </form>
+                    </div>
                 </div>
+                <div id="resultsContainer"></div>
                 <!-- </section> -->
 
                 <!-- <div class="about-us">
