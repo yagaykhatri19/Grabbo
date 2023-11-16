@@ -121,7 +121,10 @@ footerTitleButton.addEventListener("click", init);
 
 const generateProductsOnPage = function (category) {
   // Fetch product data from the server
-  fetch(`http://localhost:8800/student/products/${category}`)
+  // fetch(`http://localhost:8800/student/products/${category}`)
+  fetch(
+    `https://grabbodbmsproject-priansh24.onrender.com/student/products/${category}`
+  )
     .then((response) => response.json())
     .then((data) => {
       // console.log(data);
