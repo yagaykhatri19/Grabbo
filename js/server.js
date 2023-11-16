@@ -2,22 +2,28 @@
 // const express = require("express");
 // const mysql = require("mysql");
 import mysql from "mysql2";
-
-const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "mysql@12345",
-  database: "grabbo",
-});
+import dotenv from "dotenv";
 
 // import { db } from "./connection.js";
 import express from "express";
 import cors from "cors";
+dotenv.config();
+const dbHost = process.env.DB_HOST;
+const dbName = process.env.DB_DBNAME;
+const dbUsername = process.env.DB_USERNAME;
+const dbPassword = process.env.DB_PASSWORD;
+const port = process.env.PORT || 8800;
+
+const db = mysql.createConnection({
+  host: dbHost,
+  user: dbUsername,
+  password: dbPassword,
+  database: dbName,
+});
 
 const app = express();
 app.use(cors());
 app.use(express.json());
-const port = process.env.PORT || 8800;
 // const allowedOrigin = "http://localhost:62767/addProduct.html";
 
 // // Configure CORS
