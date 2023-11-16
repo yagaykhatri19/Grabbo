@@ -17,7 +17,7 @@ import cors from "cors";
 const app = express();
 app.use(cors());
 app.use(express.json());
-const port = 8800;
+const port = process.env.PORT || 8800;
 // const allowedOrigin = "http://localhost:62767/addProduct.html";
 
 // // Configure CORS

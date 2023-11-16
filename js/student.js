@@ -14,13 +14,8 @@ const dairy = document.querySelector(".dairy");
 const categoryButtons = document.querySelectorAll(".category-button");
 
 const getRandomNumber = function (min, max) {
-  // Generate a random decimal number between 0 and 1
   const randomDecimal = Math.random();
-
-  // Scale the random number to fit within the range [min, max]
   const randomInRange = randomDecimal * (max - min) + min;
-
-  // Use Math.floor to truncate the decimal and return an integer
   return Math.floor(randomInRange);
 };
 
@@ -32,22 +27,9 @@ const generateQuote = function () {
     "My relationship status: In a committed and steamy relationship with ramen.",
   ];
   const randomNum = getRandomNumber(0, quotes.length);
-  return quotes[randomNum];
-  //   return quotes[3];
-};
-const generateOutOfStock = function () {
-  const quotes = [
-    `The product's taking a little time off the shelf. It'll
-    be back!`,
-    `Sorry, but it's not in stock today. It's exploring
-    new horizons!`,
-    `Our inventory is having a product party, and this one's fashionably late. It will join the celebration shortly!`,
-    `This item is in a cozy hide-and-seek game with our inventory. Keep looking!`,
-    `Whoops, the product is currently on vacation from our shelves. It will be back soon!`,
-  ];
-  const randomNum = getRandomNumber(0, quotes.length);
-  return quotes[randomNum];
-  //   return quotes[3];
+  // return quotes[randomNum];
+  const quote = document.querySelector(".quote");
+  quote.textContent = quotes[randomNum];
 };
 
 const generateAboutUs = function (e) {
@@ -88,18 +70,20 @@ const generateAboutUs = function (e) {
 
 aboutUsButton.addEventListener("click", generateAboutUs);
 
+// const quote = document.querySelector(".quote");
+// quote.textContent = generateQuote();
+generateQuote();
 const generateHomePage = function (e) {
   if (e) e.preventDefault();
-
   const html = `<div class="search-container">
   <div class = "heading-container">
-    <div class="heading">
-        <h3 class="quote">" ${generateQuote()} "
+  <div class="heading">
+        <h3 class="quote">
         </h3>
-    </div>
+        </div>
     <div class="search-bar-section">
 
-                        <form class="form search-bar">
+    <form class="form search-bar">
                             <button>
                                 <svg width="17" height="16" fill="none"
                                     xmlns="http://www.w3.org/2000/svg"
@@ -119,15 +103,15 @@ const generateHomePage = function (e) {
                             <button class="reset" type="reset">
                             </button>
                         </form>
-                    </div>
-    </div>
-</div>`;
+                        </div>
+                        </div>
+                        </div>`;
   contentSection.innerHTML = html;
-  // setUpSearchBar();
 };
 
 const init = function () {
   generateHomePage();
+  generateQuote();
   setUpSearchBar();
 };
 
@@ -155,8 +139,6 @@ categoryButtons.forEach((button) => {
     generateProductsOnPage(category);
   });
 });
-
-// instantFood.addEventListener("click", generateProductsOnPage);
 
 // Dropdown functionality
 const toggleDropdownButton = document.querySelector(".dropdown-toggle");
